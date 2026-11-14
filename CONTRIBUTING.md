@@ -1,8 +1,8 @@
-# Contributing to the IWIN Standard Registry
+# Contributing to the OWIN Standard Registry
 
-Thank you for your interest in the **International Wine Identification Number (IWIN)** initiative! To achieve a truly global, decentralized, and semantic standard for wine data, we rely on the open-source community to seed, verify, and maintain our central dictionaries.
+Thank you for your interest in the **Open Wine Identification Number (OWIN)** initiative! To achieve a truly global, decentralized, and semantic standard for wine data, we rely on the open-source community to seed, verify, and maintain our central dictionaries.
 
-Whether you are a developer, a winery owner, or a wine tech platform, here is how you can contribute to the IWIN database registries.
+Whether you are a developer, a winery owner, or a wine tech platform, here is how you can contribute to the OWIN database registries.
 
 ---
 
@@ -28,7 +28,7 @@ If you wish to add raw data directly to our dictionary files:
 ---
 
 ## 2. Strict Registry Rules & Architectural Laws
-To maintain the structural integrity of the IWIN standard, all data contributions must adhere to the following strict laws:
+To maintain the structural integrity of the OWIN standard, all data contributions must adhere to the following strict laws:
 
 1. **Terroir-First Geography:** Wine regions and appellations must reflect legal viticultural zones, never generic political or administrative borders.
 2. **Append-Only Sequences:** Once a 4-digit appellation code (e.g., `0424`) or a 6-digit producer ID (e.g., `104852`) is assigned, it can **never** be changed, re-ordered, or deleted. This ensures absolute backward compatibility.
