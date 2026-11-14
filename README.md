@@ -1,4 +1,4 @@
-# : Open Wine Identification Number
+# OWIN : Open Wine Identification Number
 ## Technical Specification & Architecture Whitepaper
 
 **Author:**  Initiative  
