@@ -1,6 +1,6 @@
-# IWIN Reference Registries & Dictionaries
+# OWIN Reference Registries & Dictionaries
 
-This directory structures the decentralized data dictionaries for the **International Wine Identification Number (IWIN)** protocol. These files serve as the static ground truth for local validation, client-side parsing, and offline inventory resolution.
+This directory structures the decentralized data dictionaries for the **Open Wine Identification Number (OWIN)** protocol. These files serve as the static ground truth for local validation, client-side parsing, and offline inventory resolution.
 
 ## 📂 Directory Structure
 
