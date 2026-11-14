@@ -1,7 +1,7 @@
-# IWIN: International Wine Identification Number
+# : Open Wine Identification Number
 ## Technical Specification & Architecture Whitepaper
 
-**Author:** IWIN Initiative  
+**Author:**  Initiative  
 **Status:** Canonical Standard Specification  
 **Version:** 1.0.0 (November 2026)  
 **Licensing:** Dual-Licensing (Open-Source GNU GPLv3 / Commercial)
@@ -11,7 +11,7 @@
 ### 1. Abstract
 The digital wine ecosystem currently lacks a decentralized, human-readable, and semantic data standard. Existing identification methods rely on arbitrary sequential database keys that require constant API queries to resolve fundamental product attributes like country, appellation, vintage, or color. This architecture introduces high friction for cellar management software, smart appliances, logistics platforms, and decentralized inventories.
 
-The **International Wine Identification Number (IWIN)** solves this problem by providing a fixed-width, positional, and semantic identifier. By alternating alphabetical and numerical blocks, an IWIN string embeds a wine’s strict biological, regulatory, and physical DNA directly into the code. IWIN enables instant local data parsing, algorithmic sorting, and full offline portability without requiring a central API query, establishing a new open infrastructure for global wine-tech applications.
+The **Open Wine Identification Number ()** solves this problem by providing a fixed-width, positional, and semantic identifier. By alternating alphabetical and numerical blocks, an  string embeds a wine’s strict biological, regulatory, and physical DNA directly into the code.  enables instant local data parsing, algorithmic sorting, and full offline portability without requiring a central API query, establishing a new open infrastructure for global wine-tech applications.
 
 ---
 
@@ -26,37 +26,37 @@ While global standards exist for trade and retail checkout, they are fundamental
 ---
 
 ### 3. Strategic Positioning: The ISBN of the Wine Industry
-To protect interoperability and establish clear boundaries, IWIN defines its scope strictly as an **infrastructure protocol**:
+To protect interoperability and establish clear boundaries,  defines its scope strictly as an **infrastructure protocol**:
 
-* **IWIN is NOT a cellar manager:** It does not track personal bottle locations, maturity windows, or tasting notes. It provides the universal key (and QR standard) that software platforms can leverage to automate processing.
-* **IWIN is NOT a rating or review system:** It records no subjective scores or commercial reviews. The standard is strictly factual, regulatory, and technical.
-* **IWIN is NOT an e-commerce platform:** It does not sell wine, monitor retail pricing, or charge transactions.
-* **IWIN is NOT a narrative encyclopedia:** It does not store estate stories or soil geology write-ups. The central registry validates only the legal existence of viticultural regions, appellations, vinifiers, and physical packaging.
+* ** is NOT a cellar manager:** It does not track personal bottle locations, maturity windows, or tasting notes. It provides the universal key (and QR standard) that software platforms can leverage to automate processing.
+* ** is NOT a rating or review system:** It records no subjective scores or commercial reviews. The standard is strictly factual, regulatory, and technical.
+* ** is NOT an e-commerce platform:** It does not sell wine, monitor retail pricing, or charge transactions.
+* ** is NOT a narrative encyclopedia:** It does not store estate stories or soil geology write-ups. The central registry validates only the legal existence of viticultural regions, appellations, vinifiers, and physical packaging.
 
-By acting as an open, invisible, and universal infrastructure layer, IWIN empowers existing software tools rather than competing with them.
+By acting as an open, invisible, and universal infrastructure layer,  empowers existing software tools rather than competing with them.
 
 ---
 
 ### 4. Representation Formats: Core vs. Extended
-To accommodate both low-level database efficiency and human interaction (text entry, optical character recognition, mobile scanning), IWIN defines two logical levels and two structural layouts:
+To accommodate both low-level database efficiency and human interaction (text entry, optical character recognition, mobile scanning),  defines two logical levels and two structural layouts:
 
-1. **IWIN-Core (22 characters in storage):** Represents the immutable identity of the liquid itself (Country, Vintage, Region, Appellation, Color, Producer, Cuvée).
-2. **IWIN-Extended (29 characters in storage):** Extends the Core identity by appending a 7-character physical packaging segment (Volume in ml + Container Material).
+1. **-Core (22 characters in storage):** Represents the immutable identity of the liquid itself (Country, Vintage, Region, Appellation, Color, Producer, Cuvée).
+2. **-Extended (29 characters in storage):** Extends the Core identity by appending a 7-character physical packaging segment (Volume in ml + Container Material).
 
 #### Structural Encoding Formats
-* **IWIN-Storage (Continuous):** Compact format stripped of punctuation, optimized for database primary keys, RFID/NFC chips, and barcode payloads.
-  * *IWIN-Core Storage (22 char.):* `FR2019BOR0042R104852AA`
-  * *IWIN-Extended Storage (29 char.):* `FR2019BOR0042R104852AA000750B`
+* **-Storage (Continuous):** Compact format stripped of punctuation, optimized for database primary keys, RFID/NFC chips, and barcode payloads.
+  * *-Core Storage (22 char.):* `FR2019BOR0042R104852AA`
+  * *-Extended Storage (29 char.):* `FR2019BOR0042R104852AA000750B`
 
-* **IWIN-Display (Delimited):** Human-friendly format using a hyphen (`-`) anchor between logical blocks. Structural alternation between letters and digits reduces visual fatigue, improves scanning readability, and prevents OCR character shifting.
-  * *IWIN-Core Display (28 char.):* `FR-2019-BOR-0042-R-104852-AA`
-  * *IWIN-Extended Display (36 char.):* `FR-2019-BOR-0042-R-104852-AA-000750B`
+* **-Display (Delimited):** Human-friendly format using a hyphen (`-`) anchor between logical blocks. Structural alternation between letters and digits reduces visual fatigue, improves scanning readability, and prevents OCR character shifting.
+  * *-Core Display (28 char.):* `FR-2019-BOR-0042-R-104852-AA`
+  * *-Extended Display (36 char.):* `FR-2019-BOR-0042-R-104852-AA-000750B`
 
 ---
 
 ### 5. Semantic Anatomy (Block-by-Block Specification)
 
-An `IWIN-Extended-Storage` string consists of **8 distinct positional blocks** spanning exactly 29 characters.
+An `-Extended-Storage` string consists of **8 distinct positional blocks** spanning exactly 29 characters.
 
 | Block | Character Position | Width & Type | Component | Description / Allowed Values |
 | :---: | :---: | :---: | :--- | :--- |
@@ -86,18 +86,18 @@ An `IWIN-Extended-Storage` string consists of **8 distinct positional blocks** s
 For physical integration on wine back-labels, cellar tags, and logistics cartons, the human-readable string is bound to a standard 2D QR Code.
 
 #### 6.1 Standard URI Format
-Official IWIN QR codes embed a structured cryptographic URL pointing to the universal resolver:
-`https://iwincode.org/[IWIN-Extended-Storage]`
+Official  QR codes embed a structured cryptographic URL pointing to the universal resolver:
+`https://code.org/[-Extended-Storage]`
 
-* *Example Payload:* `https://iwincode.org/FR2019BOR0042R104852AA000750B`
+* *Example Payload:* `https://code.org/FR2019BOR0042R104852AA000750B`
 
 #### 6.2 Resolution Behavior
-* **Consumer Interface:** Scanning the QR code with a standard smartphone camera navigates to `iwincode.org`, rendering an instant, localized technical passport of the wine.
+* **Consumer Interface:** Scanning the QR code with a standard smartphone camera navigates to `code.org`, rendering an instant, localized technical passport of the wine.
 * **Professional & System Interface:** Cellar management applications, warehouse scanners, and ERP inventory engines intercept the URL locally, extract the trailing 29 characters, and process the product identity entirely offline.
 
 ---
 
 ### 7. Intellectual Property & Central Authority
-* **Open Standard Specification:** The IWIN format and parsing specifications are published under the **GNU GPLv3** license for non-commercial software implementations.
-* **Registry Governance:** To prevent namespace collisions and data corruption, global allocation of Appellation Codes (Block 4) and Producer IDs (Block 6) is managed exclusively by the central IWIN Registry Authority.
-* **Commercial Integration:** Commercial platforms, closed-source enterprise software, and hardware compliance integrations are governed via commercial licensing agreements with the IWIN Authority.
+* **Open Standard Specification:** The  format and parsing specifications are published under the **GNU GPLv3** license for non-commercial software implementations.
+* **Registry Governance:** To prevent namespace collisions and data corruption, global allocation of Appellation Codes (Block 4) and Producer IDs (Block 6) is managed exclusively by the central  Registry Authority.
+* **Commercial Integration:** Commercial platforms, closed-source enterprise software, and hardware compliance integrations are governed via commercial licensing agreements with the  Authority.
