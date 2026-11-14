@@ -1,11 +1,11 @@
-# IWIN STANDARD — BLOCKS 4 AND 7 TECHNICAL GOVERNANCE
+# OWIN STANDARD — BLOCKS 4 AND 7 TECHNICAL GOVERNANCE
 *Architecture, Nomenclature, and Governance Rules for Collective Appellations (Block 4) and Producer Labels & Micro-Parcels (Block 7)*
 
 ---
 
 ## 1. Core Philosophy & Separation of Powers
 
-The IWIN standard relies on a strict boundary between **collective public legality** (shared by multiple operators under a public specifications registry) and **private or plot-specific initiative** (individual estate choices, single-vineyard holdings, or commercial cuvées).
+The OWIN standard relies on a strict boundary between **collective public legality** (shared by multiple operators under a public specifications registry) and **private or plot-specific initiative** (individual estate choices, single-vineyard holdings, or commercial cuvées).
 
 * **Block 4 (Collective Appellations & Sub-Appellations):** Manages the macro- and meso-geographical regulatory infrastructure (Appellations, collective sub-zones, and regional tiers). It is a national dictionary, immutable per vintage.
 * **Block 7 (Producer Labels & Parcels):** Manages micro-localizations (closed single-vineyard *Vignas*, *Climats*), commercial cuvées, and specific aging methods or estate tributes.
@@ -48,7 +48,7 @@ All local registry names (`name`) follow a clean syntax structuring the relation
   *(Note: The inclusion of type indicators in parentheses serves as a structured aid for human inspection and machine parsing).*
 
 ### 2.5 Chronological Resolution & Historical Status Mergers
-To prevent data inflation and avoid maintaining ghost codes for historically absorbed appellations (e.g., *Néac* into *Lalande-de-Pomerol*, or *Terre Tollesi* into *Tullum DOCG*), IWIN applies a **Chronological Resolution Rule** driven by application-level logic based on Block 2 (Vintage):
+To prevent data inflation and avoid maintaining ghost codes for historically absorbed appellations (e.g., *Néac* into *Lalande-de-Pomerol*, or *Terre Tollesi* into *Tullum DOCG*), OWIN applies a **Chronological Resolution Rule** driven by application-level logic based on Block 2 (Vintage):
 * **Database Encoding:** All bottles from a historic terroir use a single, unified permanent key.
 * **UI Resolution Rule:** Applications parse the vintage against the official date of regulatory mutation:
   * If **Vintage < Mutation Date**, the interface displays the historical designation (e.g., *Néac AOC* or *Terre Tollesi DOC*).
@@ -65,7 +65,7 @@ Block 7 provides 2 uppercase alphabetical characters (`AA` to `ZZ`), granting **
 2. **Inter-Vintage Stability:** The 2-letter code assigned to a specific wine label must remain identical across vintages. Year distinctions are handled entirely by Block 2.
 
 ### 3.2 Producer Freedom & Professional Recommendations (Advisory)
-Winemakers and estate managers retain **total freedom** in choosing their 2-letter codes. However, IWIN provides advisory guidelines and professional best practices to structure the 676 combinations rationally:
+Winemakers and estate managers retain **total freedom** in choosing their 2-letter codes. However, OWIN provides advisory guidelines and professional best practices to structure the 676 combinations rationally:
 
 * **Mnemonic Best Practices (English & French Examples):**
   * *Generic / Flagship & Estate Labels:* `MW` (*Main Wine*), `OV` (*Old Vines*), `AM` (*Aunt Margaret*), `GV` (*Grand Vin*), `VV` (*Vieilles Vignes*), `GM` (*Grand-Mère / Family Tribute*).
