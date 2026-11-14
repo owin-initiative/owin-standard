@@ -1,10 +1,10 @@
-# IWIN Registry Conventions & Architecture Guidelines
+# OWIN Registry Conventions & Architecture Guidelines
 
-This document outlines the operational and architectural rules governing the central dictionaries of the **International Wine Identification Number (IWIN)** initiative.
+This document outlines the operational and architectural rules governing the central dictionaries of the **Open Wine Identification Number (OWIN)** initiative.
 
 ## 1. Structure of Central Dictionaries
 
-All IWIN dictionary data is maintained in structured JSON files within the `/registries/` directory, organized by country code (ISO 3166-1 alpha-2).
+All OWIN dictionary data is maintained in structured JSON files within the `/registries/` directory, organized by country code (ISO 3166-1 alpha-2).
 
 ### 1.1 Viticultural Regions (Block 3)
 
@@ -38,11 +38,11 @@ To ensure structural consistency across diverse production models:
 
   2. *Custom Preference Assignment (Optional):* Applicants may request a specific, available 6-digit number.
 
-* **Government Meta-Registry Pivot:** To guarantee identity verification, each IWIN producer entry maps its immutable `iwin_producer_id` to official national registers (e.g., SIRENE/CVI in France, TTB permits in the US, P.IVA in Italy).
+* **Government Meta-Registry Pivot:** To guarantee identity verification, each OWIN producer entry maps its immutable `OWIN_producer_id` to official national registers (e.g., SIRENE/CVI in France, TTB permits in the US, P.IVA in Italy).
 
 ```
 {
-  "iwin_producer_id": "104852",
+  "OWIN_producer_id": "104852",
   "name": "Château Margaux",
   "entity_type": "independent_winery",
   "country": "FR",
